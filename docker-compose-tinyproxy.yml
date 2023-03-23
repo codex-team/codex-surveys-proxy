@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  tinyproxy-codex:
+    container_name: "tinyproxy-codex"
+    image: "ajoergensen/tinyproxy:latest"
+    ports:
+      - "8888:8888"
+    restart: always
+    volumes:
+      - "./tinyproxy.conf:/etc/tinyproxy/tinyproxy.conf"

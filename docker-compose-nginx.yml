@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  nginx-proxy-codex:
+    container_name: "nginx-proxy-codex"
+    image: "nginx:stable"
+    ports:
+      # - "5900:8888" # for v1
+      - "443:8888" # for v2
+    restart: always
+    volumes:
+      # - "./nginx-v1.conf:/etc/nginx/conf.d/default.conf"
+      - "./nginx-v2.conf:/etc/nginx/conf.d/default.conf"
