@@ -5,8 +5,8 @@ services:
     container_name: "nginx-proxy-codex"
     image: "nginx:stable"
     ports:
-      # - "5900:8888" # for v1
-      - "443:8888" # for v2
+      # - "8888:5900" # for v1
+      - "8888:443" # for v2
     restart: always
     volumes:
       # - "./nginx-v1.conf:/etc/nginx/conf.d/default.conf"
